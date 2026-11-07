@@ -1,132 +1,493 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Road Abroad — AI Software Engineer Plan</title>
-<style>
-  :root {
-    --bg: #0f1115; --card: #171a21; --text: #e6e8ee; --muted: #9aa3b2;
-    --accent: #e8453c; --accent-soft: rgba(232,69,60,.12); --line: #262b36; --ok: #3fb68b;
-  }
-  @media (prefers-color-scheme: light) {
-    :root { --bg: #f7f7f9; --card: #fff; --text: #1a1d24; --muted: #5d6573; --line: #e4e6ec; --accent-soft: rgba(232,69,60,.08); }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif; }
-  main { max-width: 760px; margin: 0 auto; padding: 48px 20px 80px; }
-  header h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -.02em; }
-  header p { color: var(--muted); margin: 0; }
-  .goal { margin: 28px 0; padding: 18px 20px; border-left: 4px solid var(--accent);
-    background: var(--accent-soft); border-radius: 8px; }
-  .goal strong { color: var(--accent); }
-  h2 { font-size: 1.15rem; margin: 40px 0 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
-  .progress { height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; margin: 8px 0 4px; }
-  .progress > div { height: 100%; width: 0; background: var(--ok); transition: width .3s; }
-  .progress-label { font-size: .85rem; color: var(--muted); }
-  .phase { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; }
-  .phase .when { font-size: .8rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: .05em; }
-  .phase h3 { margin: 2px 0 10px; font-size: 1.1rem; }
-  label { display: flex; gap: 10px; align-items: flex-start; padding: 5px 0; cursor: pointer; }
-  input[type=checkbox] { margin-top: 5px; accent-color: var(--ok); width: 16px; height: 16px; flex-shrink: 0; }
-  label:has(input:checked) span { color: var(--muted); text-decoration: line-through; }
-  .later { opacity: .7; }
-  ul.notes { padding-left: 20px; margin: 0; }
-  ul.notes li { margin-bottom: 10px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
-  .skill { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
-  .skill b { display: block; margin-bottom: 4px; }
-  .skill small { color: var(--muted); }
-  footer { margin-top: 48px; color: var(--muted); font-size: .85rem; text-align: center; }
-</style>
-</head>
-<body>
-<main>
-  <header>
-    <h1>✈️ Road Abroad</h1>
-    <p>My plan to land an overseas job as an AI-integrated Full-Stack / AI Software Engineer.</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Road Abroad — AI Software Engineer Plan</title>
+    <style>
+      :root {
+        --bg: #0f1115;
+        --card: #171a21;
+        --text: #e6e8ee;
+        --muted: #9aa3b2;
+        --accent: #e8453c;
+        --accent-soft: rgba(232, 69, 60, 0.12);
+        --line: #262b36;
+        --ok: #3fb68b;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f7f7f9;
+          --card: #fff;
+          --text: #1a1d24;
+          --muted: #5d6573;
+          --line: #e4e6ec;
+          --accent-soft: rgba(232, 69, 60, 0.08);
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font:
+          16px/1.6 -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Inter,
+          Roboto,
+          sans-serif;
+      }
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      header h1 {
+        font-size: 2rem;
+        margin: 0 0 4px;
+        letter-spacing: -0.02em;
+      }
+      header p {
+        color: var(--muted);
+        margin: 0;
+      }
+      .goal {
+        margin: 28px 0;
+        padding: 18px 20px;
+        border-left: 4px solid var(--accent);
+        background: var(--accent-soft);
+        border-radius: 8px;
+      }
+      .goal strong {
+        color: var(--accent);
+      }
+      h2 {
+        font-size: 1.15rem;
+        margin: 40px 0 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+      }
+      .progress {
+        height: 8px;
+        background: var(--line);
+        border-radius: 99px;
+        overflow: hidden;
+        margin: 8px 0 4px;
+      }
+      .progress > div {
+        height: 100%;
+        width: 0;
+        background: var(--ok);
+        transition: width 0.3s;
+      }
+      .progress-label {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+      .phase {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-bottom: 14px;
+      }
+      .phase .when {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      .phase h3 {
+        margin: 2px 0 4px;
+        font-size: 1.1rem;
+      }
+      .phase .done-when {
+        font-size: 0.9rem;
+        color: var(--muted);
+        margin: 0 0 10px;
+      }
+      label {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 5px 0;
+        cursor: pointer;
+      }
+      input[type="checkbox"] {
+        margin-top: 5px;
+        accent-color: var(--ok);
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+      label:has(input:checked) span {
+        color: var(--muted);
+        text-decoration: line-through;
+      }
+      .later {
+        opacity: 0.7;
+      }
+      ul.notes {
+        padding-left: 20px;
+        margin: 0;
+      }
+      ul.notes li {
+        margin-bottom: 10px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+      }
+      .skill {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 14px 16px;
+      }
+      .skill b {
+        display: block;
+        margin-bottom: 4px;
+      }
+      .skill small {
+        color: var(--muted);
+      }
+      .hours {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+      footer {
+        margin-top: 48px;
+        color: var(--muted);
+        font-size: 0.85rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>✈️ Road Abroad</h1>
+        <p>
+          My plan to land an overseas job as an AI-integrated Full-Stack / AI
+          Software Engineer.
+        </p>
+      </header>
 
-  <div class="goal">
-    <strong>Goal:</strong> Land an overseas offer as an AI-integrated full-stack engineer by early 2028.
-  </div>
+      <div class="goal">
+        <strong>Goal:</strong> A signed overseas offer, with visa sponsorship,
+        as an AI-integrated full-stack engineer by
+        <strong>March 2028</strong>.<br />
+        <strong>Not the goal:</strong> collecting certificates, side projects,
+        or perfect skills.
+      </div>
 
-  <h2>Progress</h2>
-  <div class="progress"><div id="bar"></div></div>
-  <div class="progress-label" id="barLabel">0 / 0 done</div>
+      <h2>Progress</h2>
+      <div class="progress"><div id="bar"></div></div>
+      <div class="progress-label" id="barLabel">0 / 0 done</div>
 
-  <h2>The plan</h2>
+      <h2>Weekly budget (~10 hrs)</h2>
+      <div class="grid">
+        <div class="skill">
+          <span class="hours">5h</span
+          ><small>Main focus of the current phase</small>
+        </div>
+        <div class="skill">
+          <span class="hours">3h</span><small>LeetCode / interview prep</small>
+        </div>
+        <div class="skill">
+          <span class="hours">2h</span><small>Write, post, network</small>
+        </div>
+      </div>
+      <p class="progress-label">
+        Anything beyond 10 hrs is a bonus, not the plan. The day job comes
+        first.
+      </p>
 
-  <section class="phase">
-    <div class="when">Nov 2026 – Feb 2027</div>
-    <h3>1. Settle in & finish the cert</h3>
-    <label><input type="checkbox"><span>Survive the first 3 months at the new job — do it well</span></label>
-    <label><input type="checkbox"><span>Finish the IBM Generative AI Engineering certificate (slower is OK)</span></label>
-    <label><input type="checkbox"><span>Get comfortable with Python</span></label>
-  </section>
+      <h2>The plan</h2>
 
-  <section class="phase">
-    <div class="when">Mar – Aug 2027</div>
-    <h3>2. Ship ONE real AI project</h3>
-    <label><input type="checkbox"><span>Build & deploy the AI project (RAG, tool calling, streaming, structured output)</span></label>
-    <label><input type="checkbox"><span>Add evaluation + handle cost, latency, hallucinations</span></label>
-    <label><input type="checkbox"><span>Write a clear README + architecture diagram</span></label>
-    <label><input type="checkbox"><span>LeetCode ~3 hrs/week (target 100–150 mediums, in JS/TS)</span></label>
-  </section>
+      <section class="phase">
+        <div class="when">Nov 2026 – Feb 2027</div>
+        <h3>1. Foundation</h3>
+        <p class="done-when">
+          Done when: probation passed, core AI courses finished, project spec
+          written.
+        </p>
+        <label
+          ><input type="checkbox" /><span
+            >Pass probation at the new job and get a good first review</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Finish the cert's core courses (Python, LLM apps, RAG, agents) and
+            skim the rest</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Write a one-page spec for ONE AI project: users, features, what
+            "done" means</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Start light LeetCode: 1 hr/week, easy → medium</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Check passport validity (need 2+ years left)</span
+          ></label
+        >
+      </section>
 
-  <section class="phase">
-    <div class="when">Sep 2027 – early 2028</div>
-    <h3>3. Prep & apply</h3>
-    <label><input type="checkbox"><span>System design practice — explain past projects as trade-offs</span></label>
-    <label><input type="checkbox"><span>Practise a 5-min English walkthrough of my AI project</span></label>
-    <label><input type="checkbox"><span>Reconnect with overseas companies I interviewed with before</span></label>
-    <label><input type="checkbox"><span>Shortlist companies that sponsor visas</span></label>
-    <label><input type="checkbox"><span>Apply to 30–60 roles (fintech/banks first)</span></label>
-    <label><input type="checkbox"><span>Land the offer 🎯</span></label>
-  </section>
+      <section class="phase">
+        <div class="when">Mar – Jul 2027</div>
+        <h3>2. Build &amp; prove</h3>
+        <p class="done-when">
+          Done when: project is live with real users and I've shipped AI at
+          work.
+        </p>
+        <label
+          ><input type="checkbox" /><span
+            >MVP deployed by end of May (RAG, tool calling, streaming,
+            structured output)</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Real users using it by July, even just 10</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Add evaluation + track cost, latency, hallucination rate</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Ship one AI feature or internal tool at my day job</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Write one public post on what I built and the trade-offs</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >LeetCode up to 3 hrs/week</span
+          ></label
+        >
+      </section>
 
-  <section class="phase later">
-    <div class="when">After the move — not before</div>
-    <h3>4. Later</h3>
-    <label><input type="checkbox"><span>Learn event sourcing & CQRS with Python</span></label>
-    <label><input type="checkbox"><span>Start the open-source ERP-flexibility repo</span></label>
-  </section>
+      <section class="phase">
+        <div class="when">Aug – Oct 2027</div>
+        <h3>3. Interview-ready</h3>
+        <p class="done-when">
+          Done when: I can pass a mock coding + system design round.
+        </p>
+        <label
+          ><input type="checkbox" /><span
+            >Reach ~120 LeetCode mediums done properly (in JS/TS)</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Practise system design: 1 design per week, explaining trade-offs
+            out loud</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Prepare 5 STAR stories from real work (conflict, failure,
+            ownership, impact)</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Do 3 mock interviews with real people</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Update CV, LinkedIn and GitHub: impact numbers, AI project
+            pinned</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Prepare documents: degree certificate + transcript in English,
+            reference contacts</span
+          ></label
+        >
+      </section>
 
-  <h2>What "good enough" looks like</h2>
-  <div class="grid">
-    <div class="skill"><b>Coding</b><small>LeetCode medium in 30–40 min, thinking out loud</small></div>
-    <div class="skill"><b>System design</b><small>API, DB, queue, cache, failure handling</small></div>
-    <div class="skill"><b>AI skills</b><small>One deployed project I can defend in depth</small></div>
-    <div class="skill"><b>English</b><small>Explain decisions clearly, disagree politely</small></div>
-    <div class="skill"><b>Ownership</b><small>Spec → tests → deploy → monitor, no hand-holding</small></div>
-  </div>
+      <section class="phase">
+        <div class="when">Nov 2027 – Mar 2028</div>
+        <h3>4. Apply</h3>
+        <p class="done-when">Done when: offer signed.</p>
+        <label
+          ><input type="checkbox" /><span
+            >Hit 1 year at the current job before resigning</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Reconnect with overseas companies I interviewed with before</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Ask for referrals first: 10 people in my network</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Shortlist companies that sponsor visas</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Apply to 30–60 roles and track them in a spreadsheet</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Review rejections monthly and fix the weakest stage</span
+          ></label
+        >
+        <label><input type="checkbox" /><span>Land the offer 🎯</span></label>
+      </section>
 
-  <h2>Remember</h2>
-  <ul class="notes">
-    <li><b>Don't run everything at once.</b> Spreading too thin is the biggest risk — finish one thing at a time.</li>
-    <li><b>A cert alone won't get me hired.</b> A shipped project + passing interviews will.</li>
-    <li><b>Rejections are normal.</b> Many are about visas/quotas, not me.</li>
-    <li><b>The first title doesn't have to say "AI".</b> Full-stack on an AI team is a win. Title comes later.</li>
-    <li><b>Check official visa rules before setting deadlines.</b> Salary bars and age rules change every year.</li>
-  </ul>
+      <section class="phase later">
+        <div class="when">After the move, not before</div>
+        <h3>5. Later</h3>
+        <label
+          ><input type="checkbox" /><span
+            >Learn event sourcing &amp; CQRS with Python</span
+          ></label
+        >
+        <label
+          ><input type="checkbox" /><span
+            >Start the open-source ERP-flexibility repo</span
+          ></label
+        >
+      </section>
 
-  <footer>Started November 2026 · Keep going.</footer>
-</main>
+      <h2>Checkpoints</h2>
+      <ul class="notes">
+        <li>
+          <b>Last Sunday of each month:</b> 15-minute review. What did I finish?
+          What slipped?
+        </li>
+        <li>
+          <b>More than 1 month behind?</b> Cut scope, not sleep. Drop features,
+          not the phase.
+        </li>
+        <li>
+          <b>Mid-2027 sanity check:</b> Send 3–5 test applications to see how
+          the market responds, without accepting anything before the 1-year
+          mark.
+        </li>
+      </ul>
 
-<script>
-  const KEY = 'road-abroad-progress';
-  const boxes = [...document.querySelectorAll('input[type=checkbox]')];
-  let saved = [];
-  try { saved = JSON.parse(localStorage.getItem(KEY)) || []; } catch (e) {}
-  boxes.forEach((b, i) => { b.checked = !!saved[i]; b.addEventListener('change', update); });
-  function update() {
-    const done = boxes.filter(b => b.checked).length;
-    document.getElementById('bar').style.width = (done / boxes.length * 100) + '%';
-    document.getElementById('barLabel').textContent = `${done} / ${boxes.length} done`;
-    try { localStorage.setItem(KEY, JSON.stringify(boxes.map(b => b.checked))); } catch (e) {}
-  }
-  update();
-</script>
-</body>
+      <h2>What "good enough" looks like</h2>
+      <div class="grid">
+        <div class="skill">
+          <b>Coding</b
+          ><small>LeetCode medium in 30–40 min, thinking out loud</small>
+        </div>
+        <div class="skill">
+          <b>System design</b
+          ><small>API, DB, queue, cache, failure handling</small>
+        </div>
+        <div class="skill">
+          <b>AI skills</b
+          ><small
+            >One live project with real users that I can defend in depth</small
+          >
+        </div>
+        <div class="skill">
+          <b>English</b
+          ><small>Explain decisions clearly, disagree politely</small>
+        </div>
+        <div class="skill">
+          <b>Ownership</b
+          ><small>Spec → tests → deploy → monitor, no hand-holding</small>
+        </div>
+      </div>
+
+      <h2>Rules</h2>
+      <ul class="notes">
+        <li>
+          <b>One main thing at a time.</b> Spreading too thin is the biggest
+          risk.
+        </li>
+        <li>
+          <b>Shipped beats perfect.</b> A live project with users beats a
+          polished one nobody uses.
+        </li>
+        <li>
+          <b>AI at work beats AI on the side.</b> "Shipped AI in a regulated
+          company" is my strongest story.
+        </li>
+        <li>
+          <b>Referrals beat cold applications.</b> Foreign hires often come in
+          through referrals.
+        </li>
+        <li>
+          <b>A cert alone won't get me hired.</b> Proof of work and passing
+          interviews will.
+        </li>
+        <li>
+          <b>Rejections are normal.</b> Many are about visas or quotas, not me.
+        </li>
+        <li>
+          <b>The first title doesn't have to say "AI".</b> Full-stack on an AI
+          team is a win.
+        </li>
+        <li>
+          <b>Check official visa rules before setting deadlines.</b> Salary and
+          age rules change every year.
+        </li>
+      </ul>
+
+      <footer>Started November 2026 · Keep going.</footer>
+    </main>
+
+    <script>
+      const KEY = "road-abroad-progress-v2";
+      const boxes = [...document.querySelectorAll("input[type=checkbox]")];
+      let saved = [];
+      try {
+        saved = JSON.parse(localStorage.getItem(KEY)) || [];
+      } catch (e) {}
+      boxes.forEach((b, i) => {
+        b.checked = !!saved[i];
+        b.addEventListener("change", update);
+      });
+      function update() {
+        const done = boxes.filter((b) => b.checked).length;
+        document.getElementById("bar").style.width =
+          (done / boxes.length) * 100 + "%";
+        document.getElementById("barLabel").textContent =
+          `${done} / ${boxes.length} done`;
+        try {
+          localStorage.setItem(
+            KEY,
+            JSON.stringify(boxes.map((b) => b.checked)),
+          );
+        } catch (e) {}
+      }
+      update();
+    </script>
+  </body>
 </html>
